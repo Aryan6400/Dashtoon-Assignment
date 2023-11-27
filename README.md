@@ -34,14 +34,14 @@ Explore DashToon Comic Creator: https://dashtoon-comic-creater.netlify.app/
 Framework: React.js
 
 Libraries: 
-Material UI
-Material UI Icons
-react-router-dom
+Material UI, Material UI Icons, react-router-dom
 
 
 **Getting Started**
 To get started with DashToon, follow these steps:
 
-Clone the repository.
-Install dependencies using npm install.
+Clone the repository. 
+
+Install dependencies using npm install. 
+
 Run the application using npm start.
