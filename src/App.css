@@ -5,14 +5,23 @@
     background-image: url("https://i.pinimg.com/originals/f8/da/46/f8da465672f14eb3595bd8828ecd0432.jpg");
 }
 
+.App1-dark{
+    margin: -8px;
+    padding: 0px 50px 50px;
+    min-height: 94vh;
+    background-image: url("https://images.unsplash.com/photo-1633259584604-afdc243122ea?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
 .App2{
     margin: -8px;
+    min-height: 94vh;
     padding: 0px 0px 50px;
     background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
 }
 
 .App2-dark{
     margin: -8px;
+    min-height: 94vh;
     padding: 0px 0px 50px;
     background-color: rgb(33, 33, 33);
     background-image: url("https://www.transparenttextures.com/patterns/black-thread.png");

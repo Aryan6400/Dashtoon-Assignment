@@ -5,6 +5,7 @@ import { Backdrop, CircularProgress } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useImage } from '../context/ImageContext';
+import { useTheme } from '../context/ThemeContext';
 import trackRate from '../controllers';
 import "./AddComic.css";
 import ErrorAlert from './Alert';
@@ -19,7 +20,8 @@ function AddComic() {
     const [retry, setRetry] = useState(false);
     const [notFound, setNotFound] = useState(false);
     const [rateExceed, setRateExceed] = useState(false);
-    const {setImages,setErrorStatus} = useImage();
+    const {images,setImages,setErrorStatus} = useImage();
+    const {theme} = useTheme();
     const navigate = useNavigate();
     function handleChange(event){
         const { name, value } = event.target;
@@ -43,12 +45,10 @@ function AddComic() {
         setLoading(true);
         let status=1;
         let panels=Object.values(data);
-        panels=panels.filter(el=>{
-            if(el!="") return el;
-        })
         try {
             const imgurls = await Promise.all(
                 panels.map(async (el) => {
+                    if(el=="") return "";
                     const newData={inputs:el};
                     const response = await fetch("https://xdwvg9no7pefghrn.us-east-1.aws.endpoints.huggingface.cloud",{
                         method: "POST",
@@ -74,7 +74,13 @@ function AddComic() {
                     return myImage;
                 })
             );
-            setImages(imgurls);
+            let previous=images;
+            for (let i=0;i<previous.length;i++) {
+                if (imgurls[i]!=="") {
+                    previous[i]=imgurls[i];
+                }
+            }
+            setImages(previous);
         } catch (error) {
             console.error('Error fetching data:', error);
         }
@@ -109,40 +115,40 @@ function AddComic() {
                 <CircularProgress color="secondary" />
             </Backdrop>
             <div className="addcomic">
-                <div className='form-title'>
+                <div className={`form-title ${theme=="Dark"?"title-dark":null}`}>
                     <h2>Generate Your Own Comic</h2>
                     <h4>Enter panel information and see the magic...</h4>
                 </div>
-                <form className='add-comic'>
+                <form className='add-comic' id={theme=="Dark"?"add-comic-dark":null}>
                     <div className='name-div'>
-                        <MuiTextField className="add-comic-input" label="Panel 1" name="input1" onChange={handleChange} value={data.input1} />
+                        <MuiTextField className={`add-comic-input ${theme=="Dark"?"input-dark":null}`} label="Panel 1" name="input1" onChange={handleChange} value={data.input1} />
                     </div>
                     <div className='name-div'>
-                        <MuiTextField className="add-comic-input" label="Panel 2" name="input2" onChange={handleChange} value={data.input2} />
+                        <MuiTextField className={`add-comic-input ${theme=="Dark"?"input-dark":null}`} label="Panel 2" name="input2" onChange={handleChange} value={data.input2} />
                     </div>
                     <div className='name-div'>
-                        <MuiTextField className="add-comic-input" label="Panel 3" name="input3" onChange={handleChange} value={data.input3} />
+                        <MuiTextField className={`add-comic-input ${theme=="Dark"?"input-dark":null}`} label="Panel 3" name="input3" onChange={handleChange} value={data.input3} />
                     </div>
                     <div className='name-div'>
-                        <MuiTextField className="add-comic-input" label="Panel 4" name="input4" onChange={handleChange} value={data.input4} />
+                        <MuiTextField className={`add-comic-input ${theme=="Dark"?"input-dark":null}`} label="Panel 4" name="input4" onChange={handleChange} value={data.input4} />
                     </div>
                     <div className='name-div'>
-                        <MuiTextField className="add-comic-input" label="Panel 5" name="input5" onChange={handleChange} value={data.input5} />
+                        <MuiTextField className={`add-comic-input ${theme=="Dark"?"input-dark":null}`} label="Panel 5" name="input5" onChange={handleChange} value={data.input5} />
                     </div>
                     <div className='name-div'>
-                        <MuiTextField className="add-comic-input" label="Panel 6" name="input6" onChange={handleChange} value={data.input6} />
+                        <MuiTextField className={`add-comic-input ${theme=="Dark"?"input-dark":null}`} label="Panel 6" name="input6" onChange={handleChange} value={data.input6} />
                     </div>
                     <div className='name-div'>
-                        <MuiTextField className="add-comic-input" label="Panel 7" name="input7" onChange={handleChange} value={data.input7} />
+                        <MuiTextField className={`add-comic-input ${theme=="Dark"?"input-dark":null}`} label="Panel 7" name="input7" onChange={handleChange} value={data.input7} />
                     </div>
                     <div className='name-div'>
-                        <MuiTextField className="add-comic-input" label="Panel 8" name="input8" onChange={handleChange} value={data.input8} />
+                        <MuiTextField className={`add-comic-input ${theme=="Dark"?"input-dark":null}`} label="Panel 8" name="input8" onChange={handleChange} value={data.input8} />
                     </div>
                     <div className='name-div'>
-                        <MuiTextField className="add-comic-input" label="Panel 9" name="input9" onChange={handleChange} value={data.input9} />
+                        <MuiTextField className={`add-comic-input ${theme=="Dark"?"input-dark":null}`} label="Panel 9" name="input9" onChange={handleChange} value={data.input9} />
                     </div>
                     <div className='name-div'>
-                        <MuiTextField className="add-comic-input" label="Panel 10" name="input10" onChange={handleChange} value={data.input10} />
+                        <MuiTextField className={`add-comic-input ${theme=="Dark"?"input-dark":null}`} label="Panel 10" name="input10" onChange={handleChange} value={data.input10} />
                     </div>
                     <Button onClick={handleSubmit} id='add-comic-btn'>
                         Generate

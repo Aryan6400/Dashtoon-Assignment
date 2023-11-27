@@ -16,6 +16,11 @@
     font-size: 1.15rem;
 }
 
+.title-dark{
+    background-color: #00395a;
+    box-shadow: 0 0 2px #015c90;
+}
+
 .form-title h2{
     margin-bottom: 15px;
 }
@@ -38,6 +43,11 @@
     width: 60%;
 }
 
+#add-comic-dark{
+    background-color: #505050 !important;
+    box-shadow: 0 0 2px #848484 !important;
+}
+
 .add-comic label{
     font-size: 1.1rem;
     color: #7b7b7b;
@@ -49,6 +59,9 @@
 .add-comic-input label{
     font-size: 1.1rem;
     color: #7b7b7b;
+}
+.input-dark label{
+    color: white !important;
 }
 .error{
     color: red;
