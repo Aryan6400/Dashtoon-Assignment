@@ -25,6 +25,10 @@ Rate Limiting:
 
 To maintain a fair and secure environment, DashToon incorporates rate limiting. Users are restricted from exceeding a set number of API calls, with the rate of requests capped at 3 per minute. This feature is implemented using local storage, contributing to a well-balanced user experience.
 
+Ability to add speech bubbles: 
+
+Tried to implement the ability to add speech bubbles on the comic strips using Canvas api but did't work.
+
 **Deployment:** 
 
 Explore DashToon Comic Creator: https://dashtoon-comic-creater.netlify.app/
