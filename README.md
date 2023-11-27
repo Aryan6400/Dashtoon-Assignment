@@ -1,4 +1,4 @@
-**DashToon Comic Creator** 
+<span style="font-size: larger;">**DashToon Comic Creator** </span>
 
 Create and share your own 10-panel comic strips with DashToon! This web application allows users to effortlessly generate comic strips by inputting text into a form. The magic happens behind the scenes as the text is sent to a text-to-image API using a provided API key, resulting in a visually appealing comic strip.
 
