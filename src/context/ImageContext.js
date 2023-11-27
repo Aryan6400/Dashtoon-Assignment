@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const ImageContext = createContext();
 
 function ImageProvider({children}){
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState(["","","","","","","","","",""]);
     const [errorStatus, setErrorStatus] = useState(1);
     
     return (

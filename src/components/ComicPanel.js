@@ -11,7 +11,10 @@ function ComicPanel(){
     const {theme} = useTheme();
     const navigate=useNavigate();
     useEffect(()=>{
-        if(images.length==0) navigate("/");
+        const stored=images.filter(el=>{
+            if(el!="") return el;
+        })
+        if(stored.length==0) navigate("/");
     },[])
     return (
         <>

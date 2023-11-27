@@ -75,7 +75,7 @@ function AddComic() {
                 })
             );
             let previous=images;
-            for (let i=0;i<previous.length;i++) {
+            for (let i=0;i<10;i++) {
                 if (imgurls[i]!=="") {
                     previous[i]=imgurls[i];
                 }
