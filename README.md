@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+**DashToon Comic Creator**
+Create and share your own 10-panel comic strips with DashToon! This web application allows users to effortlessly generate comic strips by inputting text into a form. The magic happens behind the scenes as the text is sent to a text-to-image API using a provided API key, resulting in a visually appealing comic strip.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+User-Friendly UI
+DashToon boasts a user-friendly interface developed with React.js and Material UI. Leveraging React.js transforms the application into a seamless single-page experience. The use of states and context ensures a smooth theme toggle, while react-router-dom facilitates easy navigation.
 
-## Available Scripts
+Responsive Design
+No matter the device, DashToon provides a delightful experience with its responsive design. Media queries and Material UI contribute to a layout that adapts gracefully to various screen sizes, ensuring users can create comics on the go.
 
-In the project directory, you can run:
+Image Handling
+Generated blob images take center stage in a responsive panel, organized in the order of their creation. This thoughtful design not only showcases the creativity of users but also enhances the overall aesthetic appeal of the comic strip.
 
-### `npm start`
+Error Handling
+DashToon prioritizes a smooth user experience by handling HTTP errors effectively. Users are guided through potential issues with informative alerts and dedicated error pages. Specific alerts and error pages are tailored to different error types, ensuring clarity and ease of troubleshooting.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Rate Limiting
+To maintain a fair and secure environment, DashToon incorporates rate limiting. Users are restricted from exceeding a set number of API calls, with the rate of requests capped at 3 per minute. This feature is implemented using local storage, contributing to a well-balanced user experience.
