@@ -1,0 +1,166 @@
+.addcomic{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-title{
+    margin-top: 50px;
+    border-radius: 5px 5px 0 0;
+    background-color: #04A2FF;
+    box-shadow: 0 0 2px #009ffb;
+    width: 60%;
+    padding: 2px 50px;
+    color: white;
+    font-size: 1.15rem;
+}
+
+.form-title h2{
+    margin-bottom: 15px;
+}
+
+.form-title h4{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.add-comic {
+    background-color: #dedede;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 2px #dedede;
+    padding: 30px 50px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 5fr 5fr;
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+    width: 60%;
+}
+
+.add-comic label{
+    font-size: 1.1rem;
+    color: #7b7b7b;
+}
+.add-comic-input{
+    width: 100%;
+    border-radius: 1px;
+}
+.add-comic-input label{
+    font-size: 1.1rem;
+    color: #7b7b7b;
+}
+.error{
+    color: red;
+}
+#add-comic-btn{
+    background-color: #04A2FF;
+    grid-area: 6/1/7/3;
+    height: 80%;
+    color: white;
+    font-weight: 700;
+}
+#add-comic-btn:hover{
+    box-shadow: 0 0 3px #04A2FF;
+    font-weight: 600;
+}
+
+@media (max-width: 1250px) {
+    .form-title{
+        width: 70%;
+    }
+    .add-comic {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .form-title{
+        width: 85%;
+    }
+    .add-comic {
+        width: 85%;
+    }
+}
+
+@media (max-width: 850px) {
+    .add-comic {
+        padding: 30px 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+    }
+    .name-div{
+        width: 100%;
+    }
+    .form-title{
+        width: 60%;
+    }
+    #add-comic-btn{
+        padding: 10px 8px 10px 8px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .add-comic {
+        width: 70%;
+    }
+    .form-title{
+        width: 70%;
+    }
+    .add-comic-input label{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .add-comic {
+        width: 75%;
+    }
+    .form-title{
+        width: 75%;
+    }
+    .form-title h2{
+        font-size: 1.4rem;
+    }
+    .form-title h4{
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .add-comic {
+        padding: 30px 35px;
+        width: 80%;
+    }
+    .form-title{
+        padding: 2px 35px;
+        width: 80%;
+    }
+    .add-comic-input input{
+        height: 80% !important;
+    }
+    .add-comic-input label{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .add-comic-input input{
+        padding: 14.5px 14px 14.5px 14px !important;
+        height: 70% !important;
+    }
+    .add-comic-input label{
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 400px) {
+    #add-comic-btn{
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,34 @@
+#alert .MuiPaper-root{
+    background-color: rgb(255, 60, 60) !important;
+    color: white !important;
+    font-size: 1rem !important;
+}
+
+#tooMany{
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+}
+
+#tooMany .MuiPaper-root{
+    background-color: rgb(255, 60, 60) !important;
+    color: white !important;
+    font-size: 1rem !important;
+}
+
+@media (max-width: 450px) {
+    #alert .MuiPaper-root{
+        font-size: 0.85rem !important;
+    }
+    #tooMany .MuiPaper-root{
+        font-size: 0.85rem !important;
+    }
+}
+
+@media (max-width: 350px) {
+    #alert .MuiPaper-root{
+        font-size: 0.75rem !important;
+    }
+    #tooMany .MuiPaper-root{
+        font-size: 0.75rem !important;
+    }
+}

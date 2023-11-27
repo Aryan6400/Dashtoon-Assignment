@@ -1,0 +1,25 @@
+.App1{
+    margin: -8px;
+    padding: 0px 50px 50px;
+    min-height: 94vh;
+    background-image: url("https://i.pinimg.com/originals/f8/da/46/f8da465672f14eb3595bd8828ecd0432.jpg");
+}
+
+.App2{
+    margin: -8px;
+    padding: 0px 0px 50px;
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+}
+
+.App2-dark{
+    margin: -8px;
+    padding: 0px 0px 50px;
+    background-color: rgb(33, 33, 33);
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread.png");
+}
+
+@media (min-height: 1000px) {
+    .App1{
+        background-size: cover;
+    }
+}
